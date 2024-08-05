@@ -11,5 +11,7 @@
         public string Telefone { get; set; }
 
         public DateTime DataNascimento { get; set; }
+
+        public TipoCadastroPessoaModel TipoCadastro { get; set; }
     }
 }

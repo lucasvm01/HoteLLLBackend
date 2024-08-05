@@ -1,6 +1,6 @@
-﻿namespace LLLBackend.Domain.Entities.Clientes
+﻿namespace HoteLLLBackend.Domain.Entities.Pessoas
 {
-    public partial class Cliente
+    public partial class Pessoa
     {
 
     }

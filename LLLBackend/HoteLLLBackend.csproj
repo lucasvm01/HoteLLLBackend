@@ -16,6 +16,7 @@
 
   <ItemGroup>
     <Folder Include="Application\" />
+    <Folder Include="Controllers\" />
     <Folder Include="Infra\" />
   </ItemGroup>
 
