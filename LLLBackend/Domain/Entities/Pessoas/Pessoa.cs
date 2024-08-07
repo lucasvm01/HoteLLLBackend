@@ -1,8 +1,9 @@
-﻿using HoteLLLBackend.Domain.Models.Pessoas;
+﻿using HoteLLLBackend.Domain.Entities.Hospedagens;
+using HoteLLLBackend.Domain.Models.Pessoas;
 
 namespace HoteLLLBackend.Domain.Entities.Pessoas
 {
-    public partial class Pessoa
+    public partial class Pessoa : BaseEntity<long>
     {
         public Pessoa(PessoaNovaModel model)
         { 
@@ -11,8 +12,9 @@ namespace HoteLLLBackend.Domain.Entities.Pessoas
             Email = model.Email;
             Telefone = model.Telefone;
             DataNascimento = model.DataNascimento;
-            TipoCadastro = new TipoCadastroPessoa(model.TipoCadastro);
+            TipoCadastro = model.TipoCadastro;
             DataRegistro = DateTime.Now;
+            IsAtiva = true;
         }
         
         private Pessoa()
@@ -33,5 +35,10 @@ namespace HoteLLLBackend.Domain.Entities.Pessoas
         public TipoCadastroPessoa TipoCadastro { get; private set; }
 
         public DateTime DataRegistro { get; private set; }
+
+        public bool IsAtiva { get; private set; }
+
+        public IReadOnlyCollection<Hospedagem> Hospedagens => _hospedagens.AsReadOnly();
+        private readonly List<Hospedagem> _hospedagens = new();
     }
 }

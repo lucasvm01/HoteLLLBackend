@@ -1,4 +1,7 @@
-﻿namespace HoteLLLBackend.Domain.Models.Pessoas
+﻿using HoteLLLBackend.Domain.Entities.Pessoas;
+using System;
+
+namespace HoteLLLBackend.Domain.Models.Pessoas
 {
     public class PessoaNovaModel
     {
@@ -12,6 +15,6 @@
 
         public DateTime DataNascimento { get; set; }
 
-        public TipoCadastroPessoaModel TipoCadastro { get; set; }
+        public TipoCadastroPessoa TipoCadastro { get; set; }
     }
 }

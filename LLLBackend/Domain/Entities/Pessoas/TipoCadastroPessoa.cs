@@ -1,29 +1,12 @@
-﻿using HoteLLLBackend.Domain.Models.Pessoas;
+﻿namespace HoteLLLBackend.Domain.Entities.Pessoas;
 
-namespace HoteLLLBackend.Domain.Entities.Pessoas
+public enum TipoCadastroPessoa
 {
-    public class TipoCadastroPessoa
-    {
-        public TipoCadastroPessoa(TipoCadastroPessoaModel model)
-        {
+    Cliente = 1,
 
-            IsCliente = model.IsCliente;
-            IsFornecedor = model.IsFornecedor;
-            IsFuncionario = model.IsFuncionario;
-            IsTecnico = model.IsTecnico;
-        }
+    Funcionario = 2,
 
-        private TipoCadastroPessoa()
-        {
-        }
+    Fornecedor = 3,
 
-        public bool IsCliente { get; private set; }
-
-        public bool IsFornecedor { get; private set; }
-
-        public bool IsFuncionario { get; private set; }
-
-        public bool IsTecnico { get; private set; }
-
-    }
+    Tecnico = 4, 
 }

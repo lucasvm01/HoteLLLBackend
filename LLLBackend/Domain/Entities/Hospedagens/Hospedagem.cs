@@ -4,7 +4,7 @@ using HoteLLLBackend.Domain.Entities.Quartos;
 
 namespace HoteLLLBackend.Domain.Entities.Hospedagens
 {
-    public partial class Hospedagem
+    public partial class Hospedagem : BaseEntity<long>
     {
         public Hospedagem(HospedagemNovaModel model)
         {
@@ -19,9 +19,13 @@ namespace HoteLLLBackend.Domain.Entities.Hospedagens
 
         public DateTime? DataReserva { get; private set; }
 
-        public bool IsAtiva { get; private set; }
+        public DateTime? DataCheckOut { get; private set; }
+
+        public bool IsReserva { get; private set; }
 
         public long FuncionarioId { get; private set; }
+
+        public bool IsAtiva { get; private set; }
 
         public IReadOnlyCollection<Pessoa> Hospedes => _hospedes.AsReadOnly();
         private readonly List<Pessoa> _hospedes = new();

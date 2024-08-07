@@ -7,25 +7,61 @@ namespace HoteLLLBackend.Domain.Entities.Hospedagens
 {
     public partial class Hospedagem
     {
-        public Pessoa AdicionarHospede(PessoaNovaModel model)
-        {
-            var hospede = new Pessoa(model);
-            _hospedes.Add(hospede);
+        //public void EditarHospedagem()
+        //{
 
-            return hospede;
-        }
+        //}
 
-        public void RemoverHospede(long pessoaId)
-        {
-            var hospedeRemover = Hospedes.First(h => h. == pessoaId);
-        }
+        //public Hospedagem CriarReserva(ReservaNovaModel model)
+        //{
 
-        public Quarto AdicionarQuarto(QuartoNovoModel model)
+        //}
+
+        //public Hospedagem EditarReserva()
+        //{
+
+        //}
+
+        //public bool CheckIn()
+        //{
+
+        //}
+
+        //public bool CancelarHospedagem()
+        //{
+
+        //}
+
+        //public bool CheckOut()
+        //{
+
+        //}
+
+        //public Pessoa AdicionarHospede(PessoaModel model)
+        //{
+        //    var hospede = new Pessoa(model);
+        //    _hospedes.Add(hospede);
+
+        //    return hospede;
+        //}
+
+        //private void RemoverHospede(long pessoaId)
+        //{
+        //    var hospedeRemover = Hospedes.First(h => h. == pessoaId);
+        //}
+
+        private Quarto AdicionarQuarto(QuartoNovoModel model)
         {
             var quarto = new Quarto(model);
             _quartos.Add(quarto);
 
             return quarto;
         }
+
+        private void RemoverQuarto(long QuartoId)
+        {
+            var quartoRemover = Quartos.First();
+        }
+
     }
 }

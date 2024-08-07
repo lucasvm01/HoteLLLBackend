@@ -1,9 +1,9 @@
-﻿namespace HoteLLLBackend.Domain.Models.Quartos
+﻿using HoteLLLBackend.Domain.Entities.Quartos;
+
+namespace HoteLLLBackend.Domain.Models.Quartos
 {
     public class QuartoNovoModel
     {
-        public int Tamanho { get; set; }
-
-        public bool IsOcupado { get; set; }
+        public TamanhoQuarto Tamanho { get; set; }
     }
 }

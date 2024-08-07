@@ -2,12 +2,14 @@
 
 namespace HoteLLLBackend.Domain.Entities.Quartos
 {
-    public partial class Quarto
+    public partial class Quarto : BaseEntity<long>
     {
         public Quarto(QuartoNovoModel model)
         {
             Tamanho = model.Tamanho;
-            IsOcupado = model.IsOcupado;
+            IsOcupado = false;
+            IsReservado = false;
+            IsAtivo = true;
         }
 
 
@@ -16,10 +18,12 @@ namespace HoteLLLBackend.Domain.Entities.Quartos
             // Necessário para o EntityFramework
         }
 
-        public int Tamanho { get; private set; }
+        public TamanhoQuarto Tamanho { get; private set; }
 
         public bool IsOcupado { get; private set; }
 
         public bool IsReservado { get; private set; }
+
+        public bool IsAtivo { get; private set; }
     }
 }
